@@ -1,27 +1,27 @@
 <% html_title t(:label_kittens) %>
 
 
-<%= toolbar(title: t(:label_kittens)) do %>
-  <% if current_user.allowed_to?(:manage_kittens, @project) %>
+<%#= toolbar(title: t(:label_kittens)) do %>
+  <%# if current_user.allowed_to?(:manage_kittens, @project) %>
     <li class="toolbar-item">
-      <%= link_to(new_plugin_kitten_project_kitten_path, class: 'button') do %>
+      <%#= link_to(new_plugin_kitten_project_kitten_path, class: 'button') do %>
         <span class="button--text"><%= t(:label_kitten_new) %></span>
-      <% end %>
+      <%# end %>
     </li>
-  <% end %>
-<% end %>
+  <%# end %>
+<%# end %>
 
 
-<% if @kittens.empty? %>
-  <%= no_results_box %>
-<% else %>
+<%# if @kittens.empty? %>
+  <%#= no_results_box %>
+<%# else %>
   <p>
     These are the kittens:
   </p>
-  <% @kittens.each do |kitten| %>
-    <%= tag 'kitten-component', data: { 'kitten-name': kitten.name } %>
-  <% end %>
-<% end %>
+  <%# @kittens.each do |kitten| %>
+    <%#= tag 'kitten-component', data: { 'kitten-name': kitten.name } %>
+  <%# end %>
+<%# end %>
 
-
+-->
 <%= render "shared/kitty_image" %>
